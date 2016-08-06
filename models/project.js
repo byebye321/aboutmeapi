@@ -1,10 +1,8 @@
-class Project {
-  constructor (name, desc, link, pictures) {
-    this.name = name
-    this.desc = desc
-    this.link = link
-    this.pictures = pictures
-  }
-}
+const mongoose = require('mongoose')
 
-module.exports = Project 
+const ProjectSchema = mongoose.Schema ({
+  title: {type: String, required: true},
+  link: {type: String, required: true},
+  description: {type: String, required: true},
+})
+module.exports = mongoose.model('Project', ProjectSchema)
