@@ -9,10 +9,6 @@ router.use(function (req, res, next) {
   next()
 })
 
-// router.get('/profile', (req, res)=>{
-//   res.json({lol: 'lol'})
-// })
-
 router.get('/projects', projectController.index)
 
 module.exports = router
